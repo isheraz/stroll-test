@@ -1,0 +1,18 @@
+[2024-10-21 01:27:57] Incoming request: GET /api/assign_question?region_name=New%20York&user_id=4 from ::1
+[2024-10-21 01:27:58] Response: GET /api/assign_question?region_name=New%20York&user_id=4 - Status: 304 - Duration: 709ms
+[2024-10-21 01:28:00] Incoming request: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=42 from ::1
+[2024-10-21 01:28:00] Response: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=42 - Status: 304 - Duration: 116ms
+[2024-10-21 01:28:08] Incoming request: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=43 from ::1
+[2024-10-21 01:28:09] Response: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=43 - Status: 200 - Duration: 1231ms
+[2024-10-21 01:28:13] Incoming request: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=44 from ::1
+[2024-10-21 01:28:13] Response: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=44 - Status: 200 - Duration: 359ms
+[2024-10-21 01:28:16] Incoming request: GET /api/logs from ::1
+[2024-10-21 01:28:16] Response: GET /api/logs - Status: 200 - Duration: 57ms
+[2024-10-21 01:28:32] Incoming request: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=44 from ::1
+[2024-10-21 01:28:32] Response: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=44 - Status: 304 - Duration: 120ms
+[2024-10-21 01:28:34] Incoming request: GET /api/logs from ::1
+[2024-10-21 01:28:34] Response: GET /api/logs - Status: 200 - Duration: 5ms
+[2024-10-21 01:28:48] Incoming request: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=42 from ::1
+[2024-10-21 01:28:48] Response: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=42 - Status: 304 - Duration: 115ms
+[2024-10-21 01:28:51] Incoming request: GET /api/logs from ::1
+[2024-10-21 01:28:51] Response: GET /api/logs - Status: 200 - Duration: 20ms
