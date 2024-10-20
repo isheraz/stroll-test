@@ -16,3 +16,5 @@
 [2024-10-21 01:28:48] Response: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=42 - Status: 304 - Duration: 115ms
 [2024-10-21 01:28:51] Incoming request: GET /api/logs from ::1
 [2024-10-21 01:28:51] Response: GET /api/logs - Status: 200 - Duration: 20ms
+[2024-10-21 13:45:13] Incoming request: GET /api/logs from ::1
+[2024-10-21 13:45:13] Response: GET /api/logs - Status: 200 - Duration: 25ms

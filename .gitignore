@@ -3,3 +3,10 @@
 /ca.pem
 /.env
 diagram.*
+.DS_Store
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+logs/server.log

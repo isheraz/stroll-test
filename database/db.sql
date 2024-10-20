@@ -45,3 +45,7 @@ SELECT id FROM questions WHERE text = 'What is your opinion on remote Jobs?';
 -- Insert a cycle for this question
 INSERT INTO cycles (region_id, question_id, cycle_number, start_time, end_time)
 VALUES ((SELECT id FROM regions WHERE name = 'Singapore'), 1, 42, '2024-01-01', '2024-01-08');
+
+-- One Region has Many Question
+-- One Region has Many Cycles
+-- Many Regions have Many Questions
