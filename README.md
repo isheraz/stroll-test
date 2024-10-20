@@ -1,4 +1,5 @@
-# Question Assignment System - README
+# Question Assignment System
+The Original Task is referred at **Task.md**
 
 ## Overview
 
@@ -6,7 +7,7 @@ This project implements a dynamic **Question Assignment System** where users are
 
 ---
 
-![System Architecture](./path-to-your-image.png)
+![System Architecture](./architecture.png)
 
 ---
 
@@ -69,11 +70,15 @@ This API assigns a question based on the user's region and cycle.
   - `region_name` (required): Name of the region (e.g., `Singapore`).
   - `user_id` (required): The user ID.
   - `cycle` (optional): The cycle number. If omitted, the current cycle is used.
-  
-**Example**:
+
 
 ```bash
-curl -X GET "http://localhost:3000/api/assign_question?region_name=Singapore&user_id=123"
+curl -X GET "http://<baseurl>/api/assign_question?region_name=Singapore&user_id=123"
+```
+
+
+```bash
+curl -X GET "http://<baseurl>/api/assign_question?region_name=Singapore&user_id=1&cycle=45"
 ```
 
 Response
@@ -87,4 +92,22 @@ Response
   "question": { "text": "What is your opinion on remote work?" }
 }
 ```
+#### **2. `/logs`**
 
+```bash
+curl -X GET "http://<baseurl>/api/logs"
+```
+
+Response
+```json
+{
+  "logs": [
+    "[2024-10-21 01:28:34] Incoming request: GET /api/logs from ::1",
+    "[2024-10-21 01:28:34] Response: GET /api/logs - Status: 200 - Duration: 5ms",
+    "[2024-10-21 01:28:48] Incoming request: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=42 from ::1",
+    "[2024-10-21 01:28:48] Response: GET /api/assign_question?region_name=Singapore&user_id=123&cycle=42 - Status: 304 - Duration: 115ms",
+    "[2024-10-21 01:28:51] Incoming request: GET /api/logs from ::1",
+    "[2024-10-21 01:28:51] Response: GET /api/logs - Status: 200 - Duration: 20ms"
+  ]
+}
+```

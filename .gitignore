@@ -3,3 +3,4 @@
 /ca.pem
 /.env
 diagram.*
+.DS_Store
