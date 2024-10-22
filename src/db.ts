@@ -11,6 +11,7 @@ const log = (message: string) => {
   console.log(`[${format(new Date(), 'yyyy-MM-dd HH:mm:ss')}] ${message}`);
 };
 
+// Pool configuration based on environment
 const pool = new Pool({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
@@ -18,19 +19,17 @@ const pool = new Pool({
   password: process.env.DB_PASSWORD,
   port: Number(process.env.DB_PORT),
   ssl: {
-    rejectUnauthorized: true,  // Important: Ensure this is `true` for production with a proper cert
-    ca: fs.readFileSync(path.resolve(__dirname, '../ca.pem')).toString(),  // Path to the Aiven CA cert
+    rejectUnauthorized: true,
+    ca: fs.readFileSync(path.resolve(__dirname, '../ca.pem')).toString(),
   }
+
 });
 
-pool.on('connect', () => {
-  log('Connected to PostgreSQL successfully');
-});
+// Pool event listeners
+pool.on('connect', () => log('Connected to PostgreSQL successfully'));
+pool.on('error', (err) => log(`PostgreSQL error: ${err.message}`));
 
-pool.on('error', (err) => {
-  log(`PostgreSQL error: ${err.message}`);
-});
-
+// Centralized query function for executing all database queries
 export const query = (text: string, params?: any[]) => {
   log(`Executing query: ${text} with params: ${JSON.stringify(params)}`);
   return pool.query(text, params);

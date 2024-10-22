@@ -1,0 +1,5 @@
+Execution Order:
+First, execute questions.sql to populate the questions table.
+Then, run questions-cycle.sql to assign cycles to the questions in each region.
+Next, run profiles-answers-recorded-answers.sql to insert the mock profiles, answers, and recorded answers.
+Alternatively, you can run answers.sql or profiles-recorded-answers-mock.sql to insert different sets of profiles and answers.

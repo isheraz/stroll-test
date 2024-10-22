@@ -10,3 +10,4 @@ diagram.*
 !.elasticbeanstalk/*.global.yml
 
 logs/server.log
+/dist
