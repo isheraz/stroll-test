@@ -11,3 +11,4 @@ diagram.*
 
 logs/server.log
 /dist
+.vercel
